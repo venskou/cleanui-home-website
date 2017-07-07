@@ -3,6 +3,12 @@
 
 .ctf {
 
+	&__block__title--uncrossed {
+		&:after {
+			display: none;
+		}
+	}
+
     ////////////////////////////////////////////////////
     // MENU
 
@@ -171,5 +177,19 @@
     &__info {
     	margin-bottom: rem(50);
         border-bottom: 1px solid rgba($black, 0.1); 
+    }
+
+    ////////////////////////////////////////////////////
+    // PRODUCTS
+
+    &__products {
+        border-bottom: 1px solid rgba($black, 0.1);
+    	padding-bottom: 0;
+    	margin-bottom: rem(60);
+
+    	&__btn {
+    		margin-right: rem(10);
+    		margin-bottom: rem(10);
+    	}
     }
 }
