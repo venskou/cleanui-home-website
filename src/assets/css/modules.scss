@@ -69,16 +69,9 @@
             padding-bottom: rem(40);
             border-bottom: 1px solid rgba($black, 0.1);
             margin-bottom: rem(50);
-    	&__head {
-    		text-transform: uppercase;
-    		font-size: rem(48);
-    		line-height: rem(55);
-    		font-weight: 700;
+            
+    	&__bold {
     		color: $blue-dark;
-
-    		span {
-    			text-decoration: underline;
-    		}
     	}
 
     	&__name {

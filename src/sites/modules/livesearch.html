@@ -28,7 +28,6 @@
     <script src="<%= cdnUrl %>/assets/vendors/jquery-mousewheel/jquery.mousewheel.min.js"></script>
     <script src="<%= cdnUrl %>/assets/vendors/pathjs/path.min.js"></script>
     <script src="<%= cdnUrl %>/assets/vendors/jquery.scrollTo/jquery.scrollTo.min.js"></script>
-    <script src="<%= cdnUrl %>/assets/js/common.js"></script>
 </head>
 <body>
 
@@ -53,34 +52,40 @@
                     <a class="ctf__module-btns__btn btn btn-lg btn-outline" href="#">Installation instructions</a>
                 </div>
                 <div class="ctf__other-modules">
-                    <div class="ctf__other-modules__title">
+                    <div class="ctf__other-modules__title hidden-md-down">
                         <span>Try other modules</span>
                     </div>
-                    <div class="ctf__other-modules__market">
+                    <div class="ctf__other-modules__market hidden-md-down">
                         //= ../../templates-modules/modules-market.html
                     </div>
                 </div>
             </div>
 
             <div class="col-lg-6">
-             <div class="ctf__modules-cover">
-                 <img class="ctf__modules-cover__image" src="/assets/img/ctf/modules-cover@1x.jpg" srcset="/assets/img/ctf/modules-cover@2x.jpg 2x">
-             </div>
-         </div>
-     </div>
+                <div class="ctf__modules-cover">
+                    <img class="ctf__modules-cover__image" src="/assets/img/ctf/modules-cover@1x.jpg" srcset="/assets/img/ctf/modules-cover@2x.jpg 2x">
+                </div>
+                <div class="ctf__other-modules__title hidden-lg-up">
+                    <span>Try other modules</span>
+                </div>
+                <div class="ctf__other-modules__market hidden-lg-up">
+                    //= ../../templates-modules/modules-market.html
+                </div>
+            </div>
+        </div>
 
-     //= ../../templates/info1.html
+        //= ../../templates/info1.html
 
-     //= ../../templates/info2.html
+        //= ../../templates/info2.html
 
 
 
- </div>
+    </div>
 
- //= ../../templates/footer.html
+    //= ../../templates/footer.html
 
- <%= ymWWW %>
- <%= gaWWW %>
+    <%= ymWWW %>
+    <%= gaWWW %>
 
 </body>
 </html>
