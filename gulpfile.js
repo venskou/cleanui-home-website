@@ -52,6 +52,7 @@ var path = {
     src: {
         sites: 'src/sites/**/*.*',
         templates: 'src/templates/**/*.*',
+        templates_modules: 'src/templates-modules/**/*.*',
 
         img: 'src/assets/img/**/*.*',
         css: 'src/assets/css/**/*.*',
@@ -198,7 +199,7 @@ gulp.task('build', [
 // FILES CHANGE WATCHER
 
 gulp.task('watch', function(){
-    watch([path.src.sites, path.src.templates], function() { // watch sites folders
+    watch([path.src.sites, path.src.templates, path.src.templates_modules], function() { // watch sites folders
         gulp.start('build:structure'); // run build:structure task
     });
     watch([path.src.css], function() { // watch css folder
