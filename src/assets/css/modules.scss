@@ -144,6 +144,9 @@
     	}
     }
 
+    ////////////////////////////////////////////////////
+    // MODULES IMAGE    
+
     &__modules-cover {
     	padding-top: rem(100);
     	text-align: center;
@@ -160,5 +163,13 @@
     			width: 100%;
     		}
     	}
+    }
+
+    ////////////////////////////////////////////////////
+    // INFORMATION
+
+    &__info {
+    	margin-bottom: rem(50);
+        border-bottom: 1px solid rgba($black, 0.1); 
     }
 }
