@@ -8,7 +8,7 @@ $(function () {
 
     setInterval(function () {
         number = number + 1 >= words.length ? 0 : number + 1;
-        $('.ctf__promo__info__bold span').css({opacity: 0}).html(words[number]).animate({opacity: 1}, 200);
+        $('.ctf__actions__init-word-changer span').css({opacity: 0}).html(words[number]).animate({opacity: 1}, 200);
     }, 1000);
 
 
