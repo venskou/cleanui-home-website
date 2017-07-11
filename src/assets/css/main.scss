@@ -833,7 +833,7 @@ p {
                     box-shadow: 0 20px 80px -4px rgba(#303e72,.25);
                 }
             }
-            
+
             &__total {
                 padding: rem(80) rem(50) rem(50);
                 font-size: rem(16);
@@ -864,6 +864,7 @@ p {
         margin-bottom: rem(70);
 
         &__item {
+            display: block;
             border-radius: 5px;
             padding: rem(5) rem(6);
             background: $white;
