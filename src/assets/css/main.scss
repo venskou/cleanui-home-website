@@ -72,6 +72,10 @@ input[type=text], input[type=password], input[type=email], textarea {
     color: $gray !important;
 }
 
+.text-underline {
+    text-decoration: underline;
+}
+
 p {
     line-height: 1.7;
 }
@@ -106,6 +110,12 @@ p {
     &.btn-disabled {
         opacity: .3;
         cursor: default;
+    }
+
+    &.btn-white {
+        border-color: $gr2-1;
+        background-color: $white;
+        color: $gr2-1;
     }
 }
 
@@ -937,6 +947,56 @@ p {
                 margin-right: 0;
             }
 
+            .text-underline {
+                text-decoration: none;
+                display: inline-block;
+                position: relative;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: rem(2);
+                    left: 0;
+                    right: 0;
+                    height: 2px;
+                    background-color: #fff;
+                }
+            }
+
+            &--presentative {
+                background: linear-gradient(169deg, #0f60ce 0%, #ff2c82 100%);
+                padding: 0;
+
+                .ctf__products__item__wrap {
+                    padding: rem(40) rem(10) rem(30) rem(40);
+                    background-image: url('../../assets/img/screens/cat-react.png');
+                    background-position: 136% 48%;
+                    background-repeat: no-repeat;
+
+                    @media(max-width: $xl-max-width) {
+                        background-position: 571% 48%;
+                    }
+
+                    @media(max-width: $md-max-width) {
+                        background-position: -237% 48%;
+                    }
+                }
+
+                .ctf__products__item__link {
+                    margin-bottom: rem(26);
+                    img {
+                        display: block;
+                        height: rem(45);
+                    }
+                }
+
+                .ctf__products__item__title {
+                    font-size: rem(24);
+                    line-height: 1.3;
+                    margin-bottom: rem(30);
+                }
+            }
+
             &__right {
                 float: right;
                 width: rem(200);
@@ -1019,6 +1079,20 @@ p {
                     position: relative;
                     left: rem(-3);
                 }
+            }
+
+            &__features {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                color: $white;
+            }
+
+            &__feature {
+                font-weight: 500;
+                font-size: rem(18);
+                line-height: rem(24);
+                color: #fcfcfc;
             }
         }
     }
