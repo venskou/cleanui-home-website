@@ -42,8 +42,8 @@ $(function () {
     }
 
     function calcTotal() {
-        var typicalPrice = 90,
-            customPrice = 270,
+        var typicalPrice = 190,
+            customPrice = 490,
             typicalDays = 0.3,
             customDays = 1,
             typical = $('#numberTypical').val(),
@@ -102,7 +102,7 @@ $(function () {
     //////////////////////////////////////////////////
     // ScrollTo
 
-    Path.map("#/information").to(function(){$(window).stop(true,true).scrollTo(0, 300)});
+    Path.map("#/information").to(function(){$(window).stop(true,true).scrollTo('.scroll__information', 300, {offset: -100})});
     Path.map("#/products").to(function(){$(window).stop(true,true).scrollTo('.scroll__products', 300, {offset: -100})});
     Path.map("#/visual-builder").to(function(){$(window).stop(true,true).scrollTo('.scroll__products', 300, {offset: -100})});
     Path.map("#/hire-us").to(function(){$(window).stop(true,true).scrollTo('.scroll__hire-us', 300, {offset: -100})});

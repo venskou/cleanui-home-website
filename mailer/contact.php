@@ -14,7 +14,7 @@ $mail->Mailer   = 'smtp';
 $mail->SetFrom($_POST["userEmail"], $_POST["userName"]);
 $mail->AddReplyTo($_POST["userEmail"], $_POST["userName"]);
 $mail->AddAddress("hello@mediatec.org");
-$mail->Subject = 'HOME -> Hire Us';
+$mail->Subject = 'CleanUI -> Hire Us';
 $mail->WordWrap   = 80;
 $mail->MsgHTML('<br /> Name: ' . $_POST["userName"] . '<br /> Email: ' . $_POST["userEmail"] . '<br /> Country: ' . $_POST["userCountry"] . '<br /> Typical Pages: ' . $_POST["numberTypical"] . '<br /> Custom Pages: ' . $_POST["numberCustom"] . '<br /> Price: ' . $_POST["price"] . '<br /> Days: ' . $_POST["days"] . '<br /><br /> Content: <br /><br />' . $_POST["content"] . '<br /><br />' );
 

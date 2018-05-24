@@ -3,7 +3,7 @@
 </div>
 <div class="ctf__hire-us">
     <div class="ctf__block__descr">
-        <p>Our expert team of designers and developers are ready to transform your business.
+        <p>Need in professional Single Page Application or full circle development? Our expert team of designers and developers are ready to transform your business.
             Our manager will contact you within one business day and will discuss with you further steps.</p>
         <p>We work with 50% prepayment and 50% on delivery payment through <a href="https://www.payoneer.com/en" target="_blank" class="ctf__link ctf__link--underlined">Payoneer Payment Service</a>.
             You can easily pay by Credit Card (Visa, Mastercard) or by US Bank Payment (for US customers). </p>
@@ -54,6 +54,8 @@
                         * Typical pages is a simple pages based on pages from our templates (for example, dashboard with a widgets fitted to your requirements);
                         <br />
                         ** Custom pages is a pages created from scratch (for example, custom login page or single page promo website for your app, fully fitted to your requirements);
+                        <br />
+                        *** All pages will be delivered as fully ready to use Single Page Application
                     </p>
                 </div>
             </div>
@@ -90,7 +92,7 @@
                     <button type="submit" class="btn btn-gradient btn-shadow ctf__hire-us__send">Send Proposal</button>
                 </div>
             </div>
-            <div class="ctf__hire-us__image" style="background-image: url(<%= cdnUrl %>/assets/img/ctf/truck.jpg);"><!-- --></div>
+            <div class="ctf__hire-us__image" style="background-image: url(/assets/img/ctf/truck.jpg);"><!-- --></div>
         </form>
         <script>
             $(function() {
@@ -105,7 +107,7 @@
                     if (valid) {
                         $('#loader-backdrop').show();
                         $.ajax({
-                            url: "mailer/contact.php",
+                            url: "/mailer/contact.php",
                             type: "POST",
                             data: new FormData(this),
                             contentType: false,

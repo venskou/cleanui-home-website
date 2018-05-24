@@ -35,12 +35,7 @@ var gulp = require('gulp'),
 
 var cleanui = {
     "version": "1.0.0",
-    "templateName": "Clean UI Templates Family",
-    "cdnUrl": !argv.prod ? '' : 'http://cdn.cleanuitemplate.com',
-    "ymWWW": !argv.prod ? '' : '<script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter43575769 = new Ya.Metrika({ id:43575769, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/43575769" style="position:absolute; left:-9999px;" alt="" /></div></noscript>',
-    "gaWWW": !argv.prod ? '' : '<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-41062113-6", "auto");ga("send", "pageview");</script>',
-    "ymADMIN": !argv.prod ? '' : '<script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter43604639 = new Ya.Metrika({ id:43604639, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/43604639" style="position:absolute; left:-9999px;" alt="" /></div></noscript>',
-    "gaADMIN": !argv.prod ? '' : '<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-41062113-7", "auto");ga("send", "pageview");</script>'
+    "templateName": "Clean UI Templates Family"
 };
 
 
@@ -112,15 +107,8 @@ gulp.task('build:structure', function () {
     gulp.src(path.src.sites) // get sites
         .pipe(ignore.exclude('**/_head.html')) // exclude _head.html file
         .pipe(data({
-
             templateName: cleanui.templateName,
-            cdnUrl: cleanui.cdnUrl,
-
-            ymWWW: cleanui.ymWWW,
-            gaWWW: cleanui.gaWWW,
-            ymADMIN: cleanui.ymADMIN,
-            gaADMIN: cleanui.gaADMIN
-
+            cdnUrl: cleanui.cdnUrl
         })) // set variables
         .pipe(rigger()) // include component templates to generated pages
         .pipe(template()) // replace DATA variables
