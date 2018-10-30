@@ -1,0 +1,68 @@
+.productMarks {
+    &__item {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-content: flex-start;
+        margin-bottom: rem(20);
+    }
+
+    &__itemContent {
+        margin-left: rem(25);
+
+        @media screen and (max-width: $md-max-width) {
+            width: 65%;
+        }
+
+        @media screen and (max-width: $sm-max-width) {
+            width: 100%;
+        }
+    }
+
+    &__itemIcon {
+        flex-shrink: 0;
+        display: block;
+        width: rem(50);
+        fill: $purple-gray;
+
+        &.lnr-diamond {
+            height: rem(44);
+        }
+
+        &.lnr-leaf {
+            height: rem(47);
+        }
+
+        &.lnr-rocket {
+            height: rem(47);
+        }
+
+        &.lnr-magic-wand {
+            height: rem(48);
+        }
+
+        &.lnr-users {
+            height: rem(47);
+        }
+
+        &.lnr-graduation-hat {
+            height: rem(49);
+        }
+    }
+
+    &__itemTitle {
+        font-weight: 900;
+        font-size: rem(21);
+        color: $black;
+        text-transform: uppercase;
+        margin-bottom: rem(16);
+        margin-top: rem(11);
+    }
+
+    &__itemDescr {
+        text-transform: uppercase;
+        font-size: rem(16);
+        line-height: rem(20);
+        color: $purple-gray;
+    }
+}

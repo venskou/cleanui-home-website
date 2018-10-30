@@ -1,0 +1,22 @@
+.tagCloud {
+    &__row {
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+    &__tag {
+        display: inline-block;
+        vertical-align: top;
+        border-radius: 3px;
+        font-size: rem(15);
+        background-color: $lighten-gray;
+        color: $purple-gray;
+        padding-left: rem(10);
+        padding-right: rem(10);
+        padding-top: rem(1);
+        padding-bottom: rem(1);
+        margin-left: rem(6);
+        margin-right: rem(6);
+        margin-bottom: rem(14);
+    }
+}

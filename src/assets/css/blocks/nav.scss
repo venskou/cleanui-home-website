@@ -1,0 +1,351 @@
+.nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+
+    &__toggle {
+        display: none;
+        position: relative;
+        z-index: 120;
+        width: 50px;
+        height: 50px;
+        padding: 0 30px;
+        cursor: pointer;
+        font-size: 0;
+        border: none;
+        background-color: transparent;
+        margin-left: auto;
+
+        @media (max-width: $sm-max-width) {
+            display: block;
+            right: rem(7);
+            top: rem(7);
+        }
+
+        span {
+            position: absolute;
+            display: block;
+            top: 23px;
+            left: 13px;
+            background-color: $purple;
+            width: 32px;
+            height: 3px;
+            border-radius: 1px;
+            transition: background-color 0.2s;
+            cursor: pointer;
+
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                display: block;
+                width: 32px;
+                height: 3px;
+                border-radius: 1px;
+                background-color: $purple;
+                transition: background-color 0.2s, top 0.2s, transform 0.2s;
+                cursor: pointer;
+            }
+
+            &::before {
+                top: -9px;
+            }
+
+            &::after {
+                top: 9px;
+            }
+        }
+
+        &--open {
+            span {
+                background-color: $white;
+
+                &::before,
+                &::after{
+                    top: 0;
+                }
+
+                &::before {
+                    transform: rotate(45deg);
+                }
+
+                &::after {
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+    }
+
+    &__logo {
+        display: inline-block;
+        vertical-align: top;
+        width: 152px;
+        height: 38px;
+
+        @media screen and (max-width: $sm-max-width) {
+            padding-top: rem(6);
+        }
+    }
+
+    &__list {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 0;
+        margin-left: auto;
+        display: flex;
+        flex-direction: row;
+
+        @media (max-width: $sm-max-width) {
+            display: none;
+            position: absolute;
+            z-index: 110;
+            top: 0;
+            left: 0;
+            right: 0;
+            box-shadow: 0 50px 100px rgba(50, 50, 93, 0.1), 0 15px 35px rgba(50, 50, 93, 0.15), 0 5px 15px rgba(0, 0, 0, 0.1);
+            background-color: $white;
+            border-radius: 4px;
+            flex-direction: column;
+            padding: rem(25);
+
+            &--open {
+                display: block;
+            }
+        }
+    }
+
+    &__item {
+        position: relative;
+        margin-left: rem(25);
+        margin-right: rem(25);
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        @media screen and (max-width: $md-max-width) {
+            margin-left: rem(13);
+            margin-right: rem(13);
+        }
+
+        @media screen and (max-width: $sm-max-width) {
+            margin-left: 0;
+            margin-right: 0;
+            margin-bottom: rem(7);
+        }
+
+        &--dropdownToggle {
+            @media screen and (max-width: $sm-max-width) {
+                margin-bottom: 0;
+            }
+
+            @media screen and (min-width: $sm-min-width) {
+                overflow: hidden;
+
+                &:hover, &.hover {
+                    overflow: visible;
+                    .nav__subListWrapper {
+                        height: auto;
+                        width: auto;
+                        overflow: visible;
+                        clip: initial;
+                        z-index: 10;
+                        padding-top: rem(73);
+                        padding-left: rem(51);
+                        padding-right: rem(66);
+                        padding-bottom: rem(25);
+                        top: rem(-27);
+                        left: rem(-51);
+                    }
+
+                    .nav__link {
+                        position: relative;
+                        z-index: 20;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+
+    &__link {
+        text-transform: uppercase;
+        font-weight: 900;
+        color: $purple;
+        font-size: rem(15);
+        line-height: rem(30);
+
+        &:hover, &:focus {
+            text-decoration: underline;
+            color: $purple
+        }
+
+        &:active {
+            color: $dark-purple;
+        }
+
+        @media screen and (max-width: $md-max-width) {
+            font-size: rem(14);
+        }
+
+        @media screen and (max-width: $sm-max-width) {
+            font-size: rem(15);
+        }
+    }
+
+    &__subListWrapper {
+        @media screen and (min-width: $sm-min-width) {
+            position: absolute;
+            clip: rect(0 0 0 0);
+            padding: 0;
+            border: 0;
+            height: 1px;
+            width: 1px;
+            overflow: hidden;
+            z-index: 0;
+            border-radius: 5px;
+            box-shadow: 0 7px 25px rgba(0, 0, 0, 0.1);
+            background-color: $white;
+        }
+    }
+
+    &__subList {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__subItem {
+        display: block;
+        white-space: nowrap;
+
+        &:first-child {
+            border-top: 1px solid $lighten-gray-3;
+            padding-top: rem(20);
+
+            @media screen and (max-width: $sm-max-width) {
+                margin-top: rem(5);
+                padding-top: rem(10);
+            }
+        }
+
+        &:last-child {
+            border-top: 1px solid $lighten-gray-3;
+            margin-top: rem(16);
+            padding-top: rem(16);
+
+            @media screen and (max-width: $sm-max-width) {
+                margin-top: 0;
+                padding-top: 0;
+                padding-bottom: rem(5);
+                margin-bottom: rem(10);
+                border-top: none;
+                border-bottom: 1px solid $lighten-gray-3;
+            }
+        }
+
+        @media screen and (max-width: $sm-max-width) {
+            margin-bottom: rem(4);
+        }
+    }
+
+    &__subLink {
+        display: block;
+        font-size: rem(15);
+        line-height: rem(30);
+        color: $purple-gray;
+        font-weight: 400;
+        transition: color 0.2s ease-in;
+        margin-left: rem(-26);
+
+        &:hover, &:focus {
+            color: $purple;
+            text-decoration: none;
+        }
+
+        &:active {
+            color: $dark-purple;
+        }
+
+        &:not([href]):not([tabindex]) {
+            color: $light-gray;
+
+            &:hover, &:focus {
+                color: $light-gray;
+                text-decoration: none;
+            }
+        }
+
+        &::before {
+            content: '';
+            display: inline-block;
+            margin-right: rem(10);
+            background-repeat: no-repeat;
+            background-position: top left;
+            background-size: contain;
+            width: rem(16);
+            height: rem(16);
+            position: relative;
+            bottom: rem(-1);
+        }
+
+        @media screen and (max-width: $sm-max-width) {
+            margin-left: rem(15);
+            font-size: rem(17);
+        }
+
+        @media screen and (max-width: $xs-max-width) {
+            margin-left: rem(8);
+        }
+
+        &--htmlIcon {
+            &::before {
+                background-image: url(../img/logos/WS-logo-short.png);
+            }
+        }
+
+        &--reactIcon {
+            &::before {
+                background-image: url(../img/logos/AT-logo-short.png);
+            }
+        }
+
+        &--vueIcon {
+            &::before {
+                background-image: url(../img/logos/MP-logo-short.png);
+                margin-right: rem(6);
+                left: rem(1);
+            }
+        }
+
+        &--ngIcon {
+            &::before {
+                background-image: url(../img/logos/ET-logo-short.png);
+                margin-right: rem(6);
+            }
+        }
+
+        &--wsIcon {
+            &::before {
+                background-image: url(../img/logos/CS-logo-short.png);
+                height: rem(14);
+                left: rem(1);
+            }
+        }
+    }
+
+    &__subLinkBadge {
+        position: relative;
+        top: rem(-1);
+        margin-left: rem(10);
+
+        @media screen and (max-width: $md-max-width) {
+            display: none;
+        }
+    }
+}

@@ -1,6 +1,6 @@
 {
   "name": "cleanui-home",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "authors": [
     "Mediatec Software http://www.mediatec.org <hello@mediatec.com>"
   ],
@@ -9,10 +9,6 @@
     "node_modules"
   ],
   "dependencies": {
-    "bootstrap": "v4.0.0-alpha.6",
-    "jquery": "3.1.1",
-    "tether": "1.4.0",
-    "jquery-mousewheel": "3.1.13",
-    "jquery.scrollTo": "latest"
+    "jquery": "3.2.1"
   }
 }

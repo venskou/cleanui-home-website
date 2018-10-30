@@ -1,0 +1,15 @@
+.badge {
+    font-size: rem(10);
+    line-height: rem(19);
+    font-weight: 400;
+    color: $purple-gray;
+    border-radius: 3px;
+    background-color: $lighten-gray;
+    display: inline-block;
+    vertical-align: baseline;
+    text-transform: uppercase;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: rem(7);
+    padding-right: rem(7);
+}

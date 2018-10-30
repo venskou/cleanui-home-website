@@ -1,0 +1,24 @@
+.products {
+
+    &__header {
+        margin-bottom: rem(60);
+    }
+
+    &__tagCloud {
+        margin-top: rem(33);
+    }
+
+    &__list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    &__item {
+        margin-bottom: rem(80);
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

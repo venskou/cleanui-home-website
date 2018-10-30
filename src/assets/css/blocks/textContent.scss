@@ -1,0 +1,26 @@
+.textContent {
+
+    &__title {
+        margin-bottom: rem(60);
+    }
+
+
+    section {
+        margin-bottom: rem(65);
+    }
+
+    h2 {
+        color: $black;
+        font-size: rem(24);
+        font-weight: 900;
+        margin-bottom: rem(20);
+        text-transform: uppercase;
+        margin-bottom: rem(30);
+    }
+
+    p {
+        font-size: rem(16);
+        line-height: rem(30);
+        margin-bottom: rem(30);
+    }
+}

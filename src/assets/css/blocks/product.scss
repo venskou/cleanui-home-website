@@ -1,0 +1,199 @@
+.product {
+    border-radius: 3px;
+    border: 1px solid $lighten-gray-3;
+    position: relative;
+
+    &:hover {
+        .product__screen {
+            &--1 {
+                transform: translateX(-204px);
+
+                @media screen and (max-width: $md-max-width) {
+                    transform: translateX(-110px);
+                }
+
+                @media screen and (max-width: $sm-max-width) {
+                    transform: translateX(0);
+                }
+
+            }
+
+            &--2 {
+                transform: translateX(-112px);
+
+                @media screen and (max-width: $md-max-width) {
+                    transform: translateX(-61px);
+                }
+
+                @media screen and (max-width: $sm-max-width) {
+                    transform: translateX(0);
+                }
+            }
+
+            &--3 {
+                transform: translateX(-10px);
+
+                @media screen and (max-width: $md-max-width) {
+                    right: 0;
+                }
+
+                @media screen and (max-width: $sm-max-width) {
+                    transform: translateX(0);
+                }
+            }
+        }
+    }
+
+    a:not([href]):not([tabindex]) {
+        color: $light-gray;
+    }
+
+    &__header {
+        padding-top: rem(29);
+        padding-left: rem(26);
+        padding-right: rem(26);
+        margin-bottom: rem(-9);
+    }
+
+    &__contentWrapper {
+        padding-left: rem(36);
+        padding-right: rem(36);
+        padding-bottom: rem(36);
+
+        [class ^= col] {
+            position: static;
+        }
+    }
+
+    &__logo {
+        border-bottom: 1px solid $lighten-gray-3;
+        padding-top: rem(29);
+        padding-left: rem(36);
+        padding-right: rem(36);
+        padding-bottom: rem(20);
+        margin-bottom: rem(33);
+
+        &--cuiReact {
+            img {
+                width: 172px;
+            }
+        }
+
+        &--cuiWS {
+            img {
+                width: 158px;
+            }
+        }
+    }
+
+    &__technologiesList {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        margin-bottom: rem(26);
+    }
+
+    &__technology {
+        text-transform: uppercase;
+        font-weight: 700;
+        color: $black;
+        font-style: italic;
+        font-size: rem(16);
+        line-height: rem(30);
+        display: inline-block;
+        margin-right: rem(20);
+    }
+
+    &__promoText {
+        line-height: rem(24);
+        margin-bottom: rem(30);
+    }
+
+    &__screens {
+        position: absolute;
+        width: rem(200);
+        top: 0;
+        right: 0;
+
+        @media screen and (max-width: $md-max-width) {
+            top: rem(55);
+        }
+
+        @media screen and (max-width: $sm-max-width) {
+            position: relative;
+            width: auto;
+            text-align: center;
+            top: 0;
+        }
+    }
+
+    &__screen {
+        position: absolute;
+        top: rem(8);
+        right: rem(10);
+        width: rem(210);
+        will-change: transform;
+
+        @media screen and (max-width: $md-max-width) {
+            right: 0;
+        }
+
+        @media screen and (max-width: $sm-max-width) {
+            position: relative;
+        }
+
+        @media screen and (max-width: $xs-max-width) {
+            width: rem(140);
+        }
+
+        &--1 {
+            transition: transform .2s 0s ease-in-out;
+            z-index: 3;
+            transform: translateX(-194px);
+
+            @media screen and (max-width: $md-max-width) {
+                transform: translateX(-100px);
+            }
+
+            @media screen and (max-width: $sm-max-width) {
+                transform: translateX(0);
+                margin-right: rem(-90);
+            }
+
+            @media screen and (max-width: $xs-max-width) {
+                margin-right: rem(-110);
+            }
+        }
+
+        &--2 {
+            transition: transform .2s .2s ease-in-out;
+            z-index: 2;
+            transform: translateX(-102px);
+
+            @media screen and (max-width: $md-max-width) {
+                transform: translateX(-51px);
+            }
+
+            @media screen and (max-width: $sm-max-width) {
+                transform: translateX(0);
+                margin-right: rem(-90);
+            }
+
+            @media screen and (max-width: $xs-max-width) {
+                margin-right: rem(-110);
+            }
+        }
+
+        &--3 {
+            transition: transform .2s .4s ease-in-out;
+            z-index: 1;
+        }
+    }
+
+    &__viewBtn {
+        @media screen and (max-width: $sm-max-width) {
+            text-align: center;
+            margin-top: rem(15);
+        }
+    }
+}

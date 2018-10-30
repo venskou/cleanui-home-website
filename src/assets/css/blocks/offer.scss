@@ -1,0 +1,208 @@
+.offer {
+
+    &__wrapper {
+        padding-top: rem(56);
+        padding-bottom: rem(56);
+        position: relative;
+        overflow: hidden;
+    }
+
+    &__container {
+        position: relative;
+        z-index: 100;
+        text-align: center;
+        background-color: rgba($lighten-gray-4, 0.6);
+        border-radius: 5px;
+        padding-top: rem(60);
+        padding-bottom: rem(58);
+        padding-left: rem(60);
+        padding-right: rem(60);
+
+        @media screen and (max-width: $md-max-width) {
+            padding-top: rem(50);
+            padding-left: rem(50);
+            padding-right: rem(50);
+            padding-bottom: rem(48);
+        }
+
+        @media screen and (max-width: $sm-max-width) {
+            padding-top: rem(40);
+            padding-left: rem(40);
+            padding-right: rem(40);
+            padding-bottom: rem(40);
+        }
+
+        @media screen and (max-width: $xs-max-width) {
+            padding-top: rem(40);
+            padding-left: rem(30);
+            padding-right: rem(30);
+            padding-bottom: rem(40);
+        }
+    }
+
+    &__title {
+        h2 {
+            margin-bottom: rem(15);
+        }
+    }
+
+    &__subTitle {
+        margin-bottom: rem(32);
+        color: $black;
+    }
+
+    &__content {
+        color: $purple-gray;
+        font-size: rem(16);
+        line-height: rem(30);
+
+        b {
+            font-weight: 700;
+        }
+    }
+
+    &__button {
+        margin-top: rem(32);
+    }
+
+    &__decorIcon {
+        position: absolute;
+        background-repeat: no-repeat;
+        -webkit-background-size: cover;
+        background-size: contain;
+        background-position: center center;
+        animation-iteration-count: infinite;
+        opacity: 0;
+
+
+        &--1 {
+            width: rem(132);
+            height: rem(132);
+            background-image: url(../img/decor/decor-1.png);
+            animation-name: decor1animation;
+            animation-duration: 5s;
+            animation-delay: 5s;
+            animation-timing-function: ease-in-out;
+            animation-direction: alternate;
+            animation-fill-mode: forwards;
+        }
+
+        &--2 {
+            width: rem(256);
+            height: rem(268);
+            background-image: url(../img/decor/decor-2.png);
+            animation-name: decor2animation;
+            animation-duration: 10s;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: none;
+
+            @media screen and (max-width: $sm-max-width) {
+                display: none;
+            }
+        }
+
+        &--3 {
+            width: rem(85);
+            height: rem(83);
+            background-image: url(../img/logos/MP-logo-short.png);
+            transform: rotate(-16deg);
+            animation-name: decor3animation;
+            animation-duration: 8s;
+            animation-delay: 3s;
+            animation-timing-function: ease-in-out;
+            animation-direction: alternate;
+            animation-fill-mode: forwards;
+        }
+
+        &--4 {
+            width: rem(80);
+            height: rem(80);
+            background-image: url(../img/logos/WS-logo-short.png);
+            animation-name: decor4animation;
+            animation-duration: 11s;
+            animation-delay: 1s;
+            animation-timing-function: ease-in-out;
+            animation-direction: alternate;
+            animation-fill-mode: forwards;
+        }
+
+        &--5 {
+            width: rem(80);
+            height: rem(80);
+            background-image: url(../img/logos/CS-logo-short.png);
+            animation-name: decor5animation;
+            animation-duration: 6s;
+            animation-delay: 3s;
+            animation-timing-function: ease-in-out;
+            animation-direction: alternate;
+            animation-fill-mode: forwards;
+        }
+    }
+}
+
+@keyframes decor1animation {
+    0% {
+        opacity: 1;
+        top: 100%;
+        left: 3%;
+    }
+
+    100% {
+        top: rem(-150);
+        left: 46%;
+    }
+}
+
+@keyframes decor2animation {
+    0% {
+        opacity: 1;
+        top: 101%;
+        left: 17%;
+    }
+
+    100% {
+        top: rem(-270);
+        left: 65%;
+    }
+}
+
+@keyframes decor3animation {
+    0% {
+        opacity: 1;
+        top: 100%;
+        left: 39%;
+    }
+
+    100% {
+        top: rem(-270);
+        left: 6%;
+    }
+}
+
+@keyframes decor4animation {
+    0% {
+        opacity: 1;
+        top: 100%;
+        left: 59%;
+    }
+
+    100% {
+        top: rem(-140);
+        left: 14%;
+    }
+}
+
+
+@keyframes decor5animation {
+    0% {
+        opacity: 1;
+        top: 100%;
+        left: 70%;
+    }
+
+    100% {
+        top: rem(-130);
+        left: 70%;
+        transform: rotate(360deg);
+    }
+}

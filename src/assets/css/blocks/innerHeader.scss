@@ -1,0 +1,13 @@
+.innerHeader {
+    padding-top: rem(76);
+    padding-bottom: rem(57);
+
+    &--bordered {
+        padding-bottom: rem(20);
+    }
+
+    &__wrapper {
+        padding-bottom: rem(57);
+        border-bottom: 1px solid $lighten-gray-3;
+    }
+}

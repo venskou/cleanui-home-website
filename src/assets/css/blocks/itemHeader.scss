@@ -1,0 +1,266 @@
+.itemHeader {
+
+    [class ^= col-] {
+        position: static;
+    }
+
+    &__wrapper {
+        padding-bottom: rem(61);
+    }
+
+    &__nav {
+        margin-bottom: rem(70);
+    }
+
+    &__tabs {
+        border-bottom: 1px solid $lighten-gray-3;
+        padding-bottom: rem(29);
+        padding-left: rem(12);
+    }
+
+    &__tabLink {
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: rem(-30);
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: rem(-30);
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &--active {
+            &::before {
+                border: 12px solid transparent;
+                border-bottom: 12px solid $lighten-gray-3;
+            }
+
+            &::after {
+                border: 11px solid transparent;
+                border-bottom: 11px solid $white;
+            }
+        }
+    }
+
+    &__productPresent {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        margin-bottom: rem(30);
+
+        @media screen and (max-width: $xs-max-width) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    &__productPromo {
+        padding-top: rem(72);
+        position: relative;
+    }
+
+    &__productName {
+        font-size: rem(36);
+        font-weight: 900;
+        color: $black;
+        text-transform: uppercase;
+        margin-bottom: 0;
+        margin-left: rem(23);
+
+        @media screen and (max-width: $xs-max-width) {
+            margin-left: 0;
+        }
+    }
+
+    &__productCategory {
+        font-size: rem(26);
+        font-weight: 300;
+        text-transform: uppercase;
+        color: $black;
+        margin-bottom: rem(28);
+    }
+
+    &__productLogo {
+        flex-shrink: 0;
+        &--react {
+            width: rem(80);
+            height: rem(80);
+        }
+
+        @media screen and (max-width: $xs-max-width) {
+            margin-bottom: rem(10);
+        }
+    }
+
+    &__productDescr {
+        font-size: rem(16);
+        font-weight: 300;
+        line-height: rem(30);
+        margin-bottom: rem(41);
+    }
+
+    &__productOffer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: rem(38);
+
+        @media screen and (max-width: $xs-max-width) {
+            flex-direction: column;
+        }
+    }
+
+    &__productPurchase {
+        padding-top: rem(8);
+        padding-bottom: rem(4);
+        padding-left: rem(55);
+        padding-right: rem(55);
+        font-size: rem(16);
+        line-height: rem(27);
+
+        @media screen and (max-width: $xs-max-width) {
+            margin-bottom: rem(20);
+        }
+    }
+
+    &__productRates {
+        tbody {
+            display: flex;
+            flex-direction: row;
+        }
+
+        @media screen and (max-width: $xs-max-width) {
+            margin-bottom: rem(10);
+        }
+    }
+
+    &__productRate {
+        display: flex;
+        flex-direction: column;
+        color: $black;
+        margin-left: rem(47);
+        font-size: rem(16);
+        line-height: rem(24);
+
+        strong {
+            font-weight: 700;
+        }
+    }
+
+    &__purchaseNote {
+        line-height: rem(24);
+    }
+
+    &__screens {
+        position: absolute;
+        width: rem(500);
+        top: rem(-70);
+        right: rem(-96);
+
+        @media screen and (max-width: $xl-max-width) {
+            width: rem(280);
+            top: 0;
+            right: rem(-70);
+        }
+
+        @media screen and (max-width: $md-max-width) {
+            position: static;
+            width: auto;
+            right: auto;
+            text-align: center;
+        }
+
+        @media screen and (max-width: $sm-max-width) {
+            margin-bottom: rem(20);
+        }
+    }
+
+    &__screen {
+        position: absolute;
+        top: rem(8);
+        right: rem(10);
+        width: rem(320);
+        will-change: transform;
+        animation: promo 6s ease-in-out infinite;
+
+        @media screen and (max-width: $md-max-width) {
+            position: relative;
+            right: auto;
+        }
+
+        @media screen and (max-width: $xs-max-width) {
+            width: rem(225);
+        }
+
+        &--1 {
+            transition: transform .2s 0s ease-in-out;
+            z-index: 3;
+            right: 208px;
+            animation-delay: 4s;
+
+            @media screen and (max-width: $md-max-width) {
+                right: auto;
+                margin-right: rem(-140);
+            }
+
+            @media screen and (max-width: $sm-max-width) {
+                margin-right: rem(-200);
+            }
+
+            @media screen and (max-width: $xs-max-width) {
+                margin-right: rem(-210);
+            }
+
+        }
+
+        &--2 {
+            transition: transform .2s .2s ease-in-out;
+            z-index: 2;
+            right: 102px;
+            animation-delay: 2s;
+
+            @media screen and (max-width: $md-max-width) {
+                right: auto;
+                margin-right: rem(-140);
+            }
+
+            @media screen and (max-width: $sm-max-width) {
+                margin-right: rem(-200);
+            }
+
+            @media screen and (max-width: $xs-max-width) {
+                margin-right: rem(-210);
+            }
+
+        }
+
+        &--3 {
+            transition: transform .2s .4s ease-in-out;
+            z-index: 1;
+        }
+    }
+}
+
+@keyframes promo {
+    0% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+    10% {
+        -webkit-transform: translate3d(0, -10px, 0);
+        transform: translate3d(0, -10px, 0);
+    }
+    50% {
+        -webkit-transform: translate3d(0, 0px, 0);
+        transform: translate3d(0, 0px, 0);
+    }
+}

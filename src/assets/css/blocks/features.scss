@@ -1,0 +1,54 @@
+.features {
+    &__description {
+        line-height: rem(24);
+        font-size: rem(14);
+
+        @media screen and (max-width: $sm-max-width) {
+            font-size: rem(16);
+        }
+
+        &--compressed {
+            width: 80%;
+
+            @media screen and (max-width: $xl-max-width) {
+                width: 100%;
+            }
+        }
+
+        a {
+            color: $purple;
+
+            &:hover {
+                color: $dark-purple;
+            }
+        }
+    }
+
+    &__item {
+        @media screen and (max-width: $md-max-width) {
+            margin-bottom: rem(40);
+        }
+    }
+
+    &__list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        @media screen and (max-width: $sm-max-width) {
+            margin-bottom: rem(20);
+        }
+    }
+
+    &__listItem {
+        line-height: rem(24);
+        padding-left: rem(20);
+        position: relative;
+
+        &::before {
+            content: '—';
+            position: absolute;
+            left: 0;
+        }
+    }
+}

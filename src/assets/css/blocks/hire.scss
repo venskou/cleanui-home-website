@@ -1,0 +1,251 @@
+.hire {
+    &__wrapper {
+        padding-bottom: rem(35);
+    }
+
+    &__formContainer {
+        border-top: 1px solid $lighten-gray-3;
+        padding-top: rem(60);
+        padding-bottom: rem(60);
+        padding-bottom: rem(30);
+        margin-top: rem(70);
+    }
+
+    &__formInnerContainer {
+        background-color: $lighten-green;
+        padding-top: rem(104);
+        padding-bottom: rem(110);
+        border-radius: 5px;
+    }
+
+    &__formSlogan {
+        display: block;
+        text-align: center;
+        color: $black;
+        font-size: rem(24);
+        line-height: rem(30);
+        font-weight: 900;
+        text-transform: uppercase;
+        margin-bottom: rem(77);
+
+        @media screen and (max-width: $sm-max-width) {
+            font-size: rem(22);
+        }
+    }
+
+    &__formItem {
+        margin-bottom: rem(25);
+
+        &--checkbox {
+            margin-bottom: 0;
+        }
+    }
+
+    &__radioWrapper {
+        display: flex;
+        flex-direction: row;
+        border-radius: 5px;
+        margin-bottom: rem(38);
+    }
+
+    &__radio {
+        &:checked ~ .hire__radioLabel {
+            color: $white;
+            background-color: $purple;
+        }
+
+        &:focus ~ .hire__radioLabel {
+            outline: 1px solid #9BC0F7;
+        }
+    }
+
+    &__radioItem {
+        width: 50%;
+
+        &:first-child {
+            .hire__radioLabel {
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+            }
+        }
+
+        &:last-child {
+            .hire__radioLabel {
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+            }
+        }
+    }
+
+    &__radioLabel {
+        display: block;
+        text-align: center;
+        background-color: $white;
+        font-weight: 900;
+        font-size: rem(16);
+        color: $black;
+        margin-bottom: 0;
+        text-transform: uppercase;
+        padding-top: rem(12);
+        padding-bottom: rem(11);
+        cursor: pointer;
+
+        @media screen and (max-width: $sm-max-width) {
+            font-size: rem(14);
+        }
+
+        @media screen and (max-width: $xs-max-width) {
+            font-size: rem(13);
+        }
+    }
+
+    &__formLabel {
+        color: $black;
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: rem(12);
+        cursor: pointer;
+        margin-bottom: rem(18);
+
+        &--checkbox {
+            margin-bottom: rem(18);
+            position: relative;
+            padding-left: rem(40);
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: rem(-6);
+                left: 0;
+                width: 25px;
+                height: 25px;
+                background-color: $white;
+                border-radius: 5px;
+            }
+        }
+    }
+
+    &__inputWrapper {
+        position: relative;
+    }
+
+    &__inputControl {
+        background-color: $lighten-green;
+        color: $white;
+        font-size: rem(16);
+        font-weight: 900;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+
+        &--count {
+            width: rem(38);
+        }
+    }
+
+    &__inputControls {
+        &--counter {
+            position: absolute;
+            top: 50%;
+            right: rem(6);
+            transform: translateY(-50%);
+        }
+    }
+
+    &__fileInputWrapper {
+        border-radius: 5px;
+        background-color: $white;
+    }
+
+    &__input {
+        display: block;
+        width: 100%;
+        border: none;
+        border-radius: 5px;
+        color: $black;
+        font-size: rem(16);
+        padding-top: rem(6);
+        padding-bottom: rem(7);
+        padding-left: rem(15);
+        padding-right: rem(15);
+
+        &--controled {
+            padding-right: rem(100);
+        }
+
+        &--checkbox {
+            &:checked {
+                ~.hire__formLabel--checkbox {
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        top: 2px;
+                        left: 6px;
+                        z-index: 1;
+                        width: 14px;
+                        border: 2px solid;
+                        transform: rotate(-45deg);
+                        height: 7px;
+                        border-color: #009688;
+                        border-top-style: none;
+                        border-right-style: none;
+                    }
+                }
+            }
+
+            &:focus {
+                ~.hire__formLabel--checkbox {
+                    &::before {
+                        outline: 1px solid #9BC0F7;
+                    }
+                }
+            }
+        }
+
+        &--file {
+            font-weight: 400;
+            font-size: rem(13);
+        }
+
+        &--bold {
+            font-weight: 900;
+        }
+    }
+
+    &__textarea {
+        height: rem(150);
+        display: block;
+        width: 100%;
+        border-radius: 5px;
+        border: none;
+        resize: none;
+        padding-top: rem(6);
+        padding-bottom: rem(7);
+        padding-left: rem(15);
+        padding-right: rem(15);
+    }
+
+    &__submButton {
+        display: block;
+        width: 100%;
+        text-align: center;
+        color: $white;
+        font-size: rem(14);
+        line-height: rem(24);
+        font-weight: 700;
+        background-color: $green;
+        border-radius: 5px;
+        text-transform: uppercase;
+        border: none;
+        padding-top: rem(12);
+        padding-bottom: rem(10);
+        margin-top: rem(15);
+        margin-bottom: rem(27);
+    }
+
+    &__formNote {
+        font-size: rem(12);
+        line-height: rem(18);
+        font-weight: 400;
+    }
+}
