@@ -107,24 +107,28 @@
         padding-right: rem(10);
         margin-right: rem(10);
 
-        &--AT {
-            width: 31px;
+        &--HT {
+            width: 29px;
         }
 
-        &--WT {
-            width: 31px;
-        }
-
-        &--MP {
-            width: 28px;
-        }
-
-        &--ST {
+        &--RT {
             width: 30px;
         }
 
-        &--ET {
+        &--NT {
+            width: 33px;
+            position: relative;
+            top: -2px;
+        }
+
+        &--VT {
             width: 31px;
+            position: relative;
+            top: 1px;
+        }
+
+        &--WT {
+            width: 28px;
         }
     }
 

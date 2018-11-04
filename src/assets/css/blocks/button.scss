@@ -22,6 +22,12 @@
         text-decoration: none;
     }
 
+    &--disabled {
+        background-color: $lighten-gray-5 !important;
+        border-color: $light-gray !important;
+        color: $light-gray !important;
+    }
+
     &--gray {
         color: $black;
         background-color: $lighten-gray-5;

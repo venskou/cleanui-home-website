@@ -161,6 +161,7 @@
                         padding-bottom: rem(25);
                         top: rem(-27);
                         left: rem(-51);
+                        transform: scale(1);
                     }
 
                     .nav__link {
@@ -179,10 +180,10 @@
         color: $purple;
         font-size: rem(15);
         line-height: rem(30);
+        text-decoration: none !important;
 
         &:hover, &:focus {
-            text-decoration: underline;
-            color: $purple
+            color: darken($dark-purple, 5%);
         }
 
         &:active {
@@ -303,36 +304,35 @@
             margin-left: rem(8);
         }
 
-        &--htmlIcon {
+        &--HT {
             &::before {
-                background-image: url(../img/logos/WS-logo-short.png);
+                background-image: url(../img/logos/HT-logo-short.png);
             }
         }
 
-        &--reactIcon {
+        &--RT {
             &::before {
-                background-image: url(../img/logos/AT-logo-short.png);
+                background-image: url(../img/logos/RT-logo-short.png);
             }
         }
 
-        &--vueIcon {
+        &--VT {
             &::before {
-                background-image: url(../img/logos/MP-logo-short.png);
-                margin-right: rem(6);
-                left: rem(1);
-            }
-        }
-
-        &--ngIcon {
-            &::before {
-                background-image: url(../img/logos/ET-logo-short.png);
+                background-image: url(../img/logos/VT-logo-short.png);
                 margin-right: rem(6);
             }
         }
 
-        &--wsIcon {
+        &--NT {
             &::before {
-                background-image: url(../img/logos/CS-logo-short.png);
+                background-image: url(../img/logos/NT-logo-short.png);
+                margin-right: rem(6);
+            }
+        }
+
+        &--WT {
+            &::before {
+                background-image: url(../img/logos/WT-logo-short.png);
                 height: rem(14);
                 left: rem(1);
             }

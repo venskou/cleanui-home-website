@@ -104,7 +104,7 @@
         &--3 {
             width: rem(85);
             height: rem(83);
-            background-image: url(../img/logos/MP-logo-short.png);
+            background-image: url(../img/logos/VT-logo-short.png);
             transform: rotate(-16deg);
             animation-name: decor3animation;
             animation-duration: 8s;
@@ -117,7 +117,7 @@
         &--4 {
             width: rem(80);
             height: rem(80);
-            background-image: url(../img/logos/WS-logo-short.png);
+            background-image: url(../img/logos/NT-logo-short.png);
             animation-name: decor4animation;
             animation-duration: 11s;
             animation-delay: 1s;
@@ -129,7 +129,7 @@
         &--5 {
             width: rem(80);
             height: rem(80);
-            background-image: url(../img/logos/CS-logo-short.png);
+            background-image: url(../img/logos/WT-logo-short.png);
             animation-name: decor5animation;
             animation-duration: 6s;
             animation-delay: 3s;
@@ -150,6 +150,7 @@
     100% {
         top: rem(-150);
         left: 46%;
+        transform: rotate(180deg);
     }
 }
 
@@ -163,6 +164,7 @@
     100% {
         top: rem(-270);
         left: 65%;
+        transform: rotate(60deg);
     }
 }
 
@@ -176,6 +178,7 @@
     100% {
         top: rem(-270);
         left: 6%;
+        transform: rotate(180deg);
     }
 }
 
@@ -189,6 +192,7 @@
     100% {
         top: rem(-140);
         left: 14%;
+        transform: rotate(180deg);
     }
 }
 

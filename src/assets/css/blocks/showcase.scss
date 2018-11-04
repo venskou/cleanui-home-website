@@ -25,27 +25,22 @@
         vertical-align: top;
         position: relative;
         background-color: $lighten-gray;
-        box-shadow: 0 17px 35px rgba(46, 39, 94, 0.21);
+        box-shadow: 0px 20px 80px -4px rgba(48, 62, 114, 0.2);
         overflow: hidden;
+        transition: box-shadow .2s ease-in-out;
+        width: rem(330);
+        height: rem(300);
 
         &:hover {
+            box-shadow: 0px 20px 80px -4px rgba(48, 62, 114, 0.4);
+
             .showcase__itemPreviewBtn {
                 visibility: visible;
-            }
-
-            .showcase__itemPreviewImg {
-                transform: scale(1.1);
             }
         }
 
         img {
-            max-width: rem(347);
-            max-height: rem(518);
-            transition: transform 0.2s ease;
-
-            @media screen and (max-width: $xs-max-width) {
-                max-width: 100%;
-            }
+            max-width: 100%;
         }
     }
 

@@ -54,21 +54,34 @@
     }
 
     &__itemLogo {
-        width: rem(172);
         height: rem(41);
         margin-bottom: rem(14);
 
-        &--cs {
-            width: rem(152);
-            height: rem(32);
+        &--ht {
+            height: rem(38);
+        }
+
+        &--rt {
+            height: rem(41);
+        }
+
+        &--nt {
+            height: rem(44);
+        }
+
+        &--vt {
+            height: rem(37);
+        }
+
+        &--wt {
+            height: rem(35);
         }
     }
 
     &__itemName {
         color: $black;
         font-size: rem(15);
-        line-height: rem(24);
-        font-weight: 700;
+        line-height: rem(21);
         text-transform: uppercase;
         margin-bottom: rem(10);
     }

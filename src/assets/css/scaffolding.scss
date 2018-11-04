@@ -21,6 +21,17 @@ body {
     font-style: normal;
     overflow-x: hidden;
     font-size: 14px;
+    padding-left: rem(30);
+    padding-right: rem(30);
+
+    @media (max-width: $sm-max-width) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+* {
+    outline: none !important;
 }
 
 img {
