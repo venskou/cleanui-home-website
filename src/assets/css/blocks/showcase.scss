@@ -39,6 +39,19 @@
             }
         }
 
+        &--soon {
+            background: $white;
+            text-align: center;
+            padding-top: rem(120);
+            font-size: rem(18);
+            font-weight: 700;
+
+            strong {
+                font-size: rem(16);
+                font-weight: 400;
+            }
+        }
+
         img {
             max-width: 100%;
         }

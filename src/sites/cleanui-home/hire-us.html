@@ -63,15 +63,19 @@
                 <div class="col-lg-12">
                     <div class="hire__formContainer">
                         <div class="hire__formInnerContainer">
+                            <div id="loader-backdrop" class="hire__backdrop">
+                                <div class="hire__backdropLoader"></div>
+                            </div>
                             <div class="row">
                                 <div class="mx-auto col-lg-6 col-md-8 col-sm-10 col-11">
                                     <b class="hire__formSlogan">
                                         Ready to make some software magic?<br>
                                         The first step is connecting
                                     </b>
-                                    <form action="">
+                                    <form id="hire-us-form" action="" method="post">
                                         <div class="row">
                                             <div class="col-lg-12">
+                                                <!--
                                                 <div class="hire__formItem">
                                                     <div class="hire__radioWrapper">
                                                         <div class="hire__radioItem">
@@ -86,19 +90,20 @@
                                                         </div>
                                                     </div>
                                                 </div>
+                                                -->
                                                 <div class="row">
                                                     <div class="col-lg-6">
                                                         <div class="hire__formItem">
                                                             <div class="hire__formLabelWrapper">
-                                                                <label class="hire__formLabel" for="numberTypicalPages">Number of typical
+                                                                <label class="hire__formLabel" for="numberTypical">Number of typical
                                                                     pages</label>
                                                             </div>
                                                             <div class="hire__inputWrapper">
-                                                                <input class="hire__input hire__input--controled" id="numberTypicalPages"
-                                                                       type="text">
+                                                                <input class="hire__input hire__input--controled" id="numberTypical" name="numberTypical"
+                                                                       type="number" maxlength="2">
                                                                 <div class="hire__inputControls hire__inputControls--counter">
-                                                                    <button type="button" class="hire__inputControl hire__inputControl--count">+</button>
-                                                                    <button type="button" class="hire__inputControl hire__inputControl--count">-</button>
+                                                                    <button type="button" class="hire__inputControl hire__inputControl--count hire__plus">+</button>
+                                                                    <button type="button" class="hire__inputControl hire__inputControl--count hire__minus">-</button>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -106,15 +111,15 @@
                                                     <div class="col-lg-6">
                                                         <div class="hire__formItem">
                                                             <div class="hire__formLabelWrapper">
-                                                                <label class="hire__formLabel" for="numberCustomPages">Number of custom
+                                                                <label class="hire__formLabel" for="numberCustom">Number of custom
                                                                     pages</label>
                                                             </div>
                                                             <div class="hire__inputWrapper">
-                                                                <input class="hire__input hire__input--controled" id="numberCustomPages"
-                                                                       type="text">
+                                                                <input class="hire__input hire__input--controled" id="numberCustom" name="numberCustom"
+                                                                       type="number" maxlength="2">
                                                                 <div class="hire__inputControls hire__inputControls--counter">
-                                                                    <button type="button" class="hire__inputControl hire__inputControl--count">+</button>
-                                                                    <button type="button" class="hire__inputControl hire__inputControl--count">-</button>
+                                                                    <button type="button" class="hire__inputControl hire__inputControl--count hire__plus">+</button>
+                                                                    <button type="button" class="hire__inputControl hire__inputControl--count hire__minus">-</button>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -124,7 +129,7 @@
                                                             <div class="hire__formItemLabel">
                                                                 <label class="hire__formLabel" for="approxPrice">Approx. price</label>
                                                             </div>
-                                                            <input class="hire__input hire__input--bold" id="approxPrice" type="text" value="$0.00">
+                                                            <input class="hire__input hire__input--bold" id="approxPrice" name="approxPrice" type="text" value="$0.00" disabled>
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-6">
@@ -132,72 +137,73 @@
                                                             <div class="hire__formItemLabel">
                                                                 <label class="hire__formLabel" for="deliveryTime">Delivery time</label>
                                                             </div>
-                                                            <input class="hire__input hire__input--bold" id="deliveryTime" type="text" value="0 Business days">
+                                                            <input class="hire__input hire__input--bold" id="deliveryDays" name="deliveryDays" type="text" value="0 Business days" disabled>
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-12">
                                                         <div class="hire__formItem">
                                                             <div class="hire__formItemLabel">
-                                                                <label class="hire__formLabel" for="fullName">Full name</label>
+                                                                <label class="hire__formLabel" for="userName">Full name</label>
                                                             </div>
-                                                            <input class="hire__input" id="fullName" type="text">
+                                                            <input class="hire__input" id="userName" name="userName" type="text">
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-6">
                                                         <div class="hire__formItem">
                                                             <div class="hire__formItemLabel">
-                                                                <label class="hire__formLabel" for="email">Email</label>
+                                                                <label class="hire__formLabel" for="userEmail">Email</label>
                                                             </div>
-                                                            <input class="hire__input" id="email" type="email">
+                                                            <input class="hire__input" id="userEmail" name="userEmail" type="email">
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-6">
                                                         <div class="hire__formItem">
                                                             <div class="hire__formItemLabel">
-                                                                <label class="hire__formLabel" for="phone">Phone</label>
+                                                                <label class="hire__formLabel" for="userPhone">Phone</label>
                                                             </div>
-                                                            <input class="hire__input" id="phone" type="tel">
+                                                            <input class="hire__input" id="userPhone" name="userPhone" type="tel">
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-6">
                                                         <div class="hire__formItem">
                                                             <div class="hire__formItemLabel">
-                                                                <label class="hire__formLabel" for="country">Country</label>
+                                                                <label class="hire__formLabel" for="userCountry">Country</label>
                                                             </div>
-                                                            <input class="hire__input" id="country" type="text">
+                                                            <input class="hire__input" id="userCountry" name="userCountry" type="text">
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-6">
                                                         <div class="hire__formItem">
                                                             <div class="hire__formItemLabel">
-                                                                <label class="hire__formLabel" for="file">Attach file</label>
+                                                                <label class="hire__formLabel" for="attachmentFile">Attach file</label>
                                                             </div>
                                                             <div class="hire__fileInputWrapper">
-                                                                <input class="hire__input hire__input--file" id="file" type="file">
+                                                                <input class="hire__input hire__input--file" id="attachmentFile" name="attachmentFile" type="file">
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-12">
                                                         <div class="hire__formItem">
                                                             <div class="hire__formItemLabel">
-                                                                <label class="hire__formLabel" for="description">Description</label>
+                                                                <label class="hire__formLabel" for="content">Description</label>
                                                             </div>
-                                                            <textarea class="hire__textarea" id="description"></textarea>
+                                                            <textarea class="hire__textarea" id="content" name="content"></textarea>
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-12">
                                                         <div class="hire__formItem hire__formItem--checkbox">
-                                                            <input class="hire__input hire__input--checkbox visuallyHidden" type="checkbox" id="sendNda">
-                                                            <label class="hire__formLabel hire__formLabel--checkbox" for="sendNda">Send nda</label>
+                                                            <input class="hire__input hire__input--checkbox visuallyHidden" type="checkbox" id="sendNda" name="sendNda">
+                                                            <label class="hire__formLabel hire__formLabel--checkbox" for="sendNda">Send NDA</label>
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-12">
                                                         <div class="hire__formItem hire__formItem--checkbox">
-                                                            <input class="hire__input hire__input--checkbox visuallyHidden" type="checkbox" id="personalDetails">
-                                                            <label class="hire__formLabel hire__formLabel--checkbox" for="personalDetails">I consent to having Intellectsoft collect my personal details.</label>
+                                                            <input class="hire__input hire__input--checkbox visuallyHidden" type="checkbox" id="collectDetails" name="collectDetails">
+                                                            <label class="hire__formLabel hire__formLabel--checkbox" for="collectDetails">I consent to having Mediatec collect my personal details.</label>
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-12">
+                                                        <div id="mail-status"></div>
                                                         <button class="hire__submButton">Send proposal</button>
                                                     </div>
                                                     <div class="col-lg-12">
@@ -212,6 +218,125 @@
                                             </div>
                                         </div>
                                     </form>
+
+                                    <script>
+                                        //////////////////////////////////////////////////
+                                        // Send Form
+
+                                        $(function() {
+                                            $("#hire-us-form input, #hire-us-form textarea").on('focus', function(){
+                                                $(this).attr('style', '')
+                                            });
+
+                                            $("#hire-us-form").on('submit', (function (e) {
+                                                e.preventDefault();
+                                                var valid;
+                                                valid = validateForm();
+                                                if (valid) {
+                                                    $('#loader-backdrop').show();
+                                                    $.ajax({
+                                                        url: "mailer/contact.php",
+                                                        type: "POST",
+                                                        data: new FormData(this),
+                                                        contentType: false,
+                                                        cache: false,
+                                                        processData: false,
+                                                        success: function (data) {
+                                                            $("#mail-status").html(data);
+                                                            $('#loader-backdrop').hide();
+                                                        },
+                                                        error: function () {
+                                                        }
+
+                                                    });
+                                                };
+                                            }));
+                                        });
+
+
+                                        function validateForm() {
+                                            var valid = true;
+                                            $("#mail-status").html('');
+
+                                            if(!$("#userName").val()) {
+                                                $("#userName").css('background-color','#f9faec');
+                                                valid = false;
+                                            }
+                                            if(!$("#userEmail").val()) {
+                                                $("#userEmail").css('background-color','#f9faec');
+                                                valid = false;
+                                            }
+                                            if(!$("#userEmail").val().match(/^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/)) {
+                                                $("#userEmail").css('background-color','#f9faec');
+                                                valid = false;
+                                            }
+                                            if(!$("#content").val()) {
+                                                $("#content").css('background-color','#f9faec');
+                                                valid = false;
+                                            }
+
+                                            return valid;
+                                        }
+
+                                        //////////////////////////////////////////////////
+                                        // Calculator
+
+                                        function numberWithSpaces(x) {
+                                            return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                                        }
+
+                                        function calcTotal() {
+                                            var typicalPrice = 90,
+                                                customPrice = 270,
+                                                typicalDays = 0.3,
+                                                customDays = 1,
+                                                typical = $('#numberTypical').val(),
+                                                custom = $('#numberCustom').val(),
+                                                formPrice = $('#approxPrice'),
+                                                formDays = $('#deliveryDays');
+
+                                            var countPrice = numberWithSpaces(typical * typicalPrice + custom * customPrice),
+                                                countDays = (typical * typicalDays + custom * customDays) < 3 ? typical + custom > 0 ? 3 : 0 : Math.ceil((typical * typicalDays + custom * customDays));
+
+                                            formPrice.val('$' + countPrice);
+                                            formDays.val(countDays + ' Business Days');
+
+                                        }
+
+                                        $('.hire__minus').on('click', function(){
+                                            var input = $(this).closest('.hire__inputWrapper').find('input'),
+                                                val = input.val();
+
+                                            if (val == '') {
+                                                val = 0;
+                                            }
+                                            if (val > 0) {
+                                                input.val(parseInt(val) - 1);
+                                            }
+                                            if (val == 1) {
+                                                input.val('');
+                                            }
+
+                                            calcTotal();
+                                        });
+
+                                        $('.hire__plus').on('click', function(){
+                                            var input = $(this).closest('.hire__inputWrapper').find('input'),
+                                                val = input.val();
+
+                                            if (val == '') {
+                                                val = 0;
+                                            }
+
+                                            input.val(parseInt(val) + 1);
+
+                                            calcTotal();
+                                        });
+
+                                        $('#numberTypical, #numberCustom').on('keyup', function (e) {
+                                            calcTotal();
+                                        });
+                                    </script>
                                 </div>
                             </div>
                         </div>
