@@ -4,7 +4,8 @@
     }
 
     &__item {
-        margin-bottom: rem(65);
+        margin: 0 auto rem(65);
+        max-width: rem(330);
 
         @media screen and (max-width: $md-max-width) {
             text-align: center;
