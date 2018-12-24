@@ -10,3 +10,4 @@ src/vendors/by_bower
 vcs.xml
 .git/
 .git
+yarn.lock

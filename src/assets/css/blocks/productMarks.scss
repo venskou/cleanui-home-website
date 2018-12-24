@@ -24,6 +24,7 @@
         display: block;
         width: rem(50);
         fill: $purple-gray;
+        height: rem(47);
 
         &.lnr-diamond {
             height: rem(44);
@@ -46,7 +47,15 @@
         }
 
         &.lnr-graduation-hat {
-            height: rem(49);
+            height: rem(53);
+        }
+
+        &.lnr-code {
+            height: rem(52);
+        }
+
+        &.lnr-phone-handset {
+            height: rem(45);
         }
     }
 
